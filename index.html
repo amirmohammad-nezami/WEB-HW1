@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبه فرمول به‌صورت پویا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>سیستم محاسباتی پویا</h2>
+        <input type="text" id="fee" placeholder="واحد قیمت" oninput="updateFormulas()">
+        <input type="text" id="count" placeholder="تعداد" oninput="updateFormulas()">
+        <input type="text" id="discount" placeholder="تخفیف" oninput="updateFormulas()">
+        
+        <div class="formula-output">
+            <formula evaluator="count * fee - discount" >Invalid Formula</formula>
+        </div>
+        <div class="formula-output">
+            <formula evaluator="count + fee + discount" >Invalid Formula</formula>
+        </div>
+        <div class="formula-output">
+            <formula evaluator="(count * fee) / (discount + 1)">Invalid Formula</formula>
+        </div>
+        
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>
